@@ -104,11 +104,7 @@
 	("set") @function.builtin)
 
 (primary_constructor
-  "constructor" @keyword
-  (class_parameter
-    (simple_identifier) @property.class
-    (_
-      (type_identifier) @type )))
+  (primary_constructor_keyword) @keyword)
 
 (secondary_constructor
 	("constructor") @keyword)

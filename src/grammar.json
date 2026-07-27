@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "kotlin",
   "word": "_alpha_identifier",
   "rules": {
@@ -597,8 +598,13 @@
                   ]
                 },
                 {
-                  "type": "SYMBOL",
-                  "name": "_primary_constructor_keyword"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_primary_constructor_keyword"
+                  },
+                  "named": true,
+                  "value": "primary_constructor_keyword"
                 }
               ]
             },

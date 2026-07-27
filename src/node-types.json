@@ -6950,6 +6950,10 @@
         {
           "type": "modifiers",
           "named": true
+        },
+        {
+          "type": "primary_constructor_keyword",
+          "named": true
         }
       ]
     }
@@ -7809,6 +7813,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -9755,10 +9760,6 @@
     "named": false
   },
   {
-    "type": "${",
-    "named": false
-  },
-  {
     "type": "%",
     "named": false
   },
@@ -10103,6 +10104,10 @@
     "named": true
   },
   {
+    "type": "is",
+    "named": false
+  },
+  {
     "type": "lateinit",
     "named": false
   },
@@ -10149,6 +10154,10 @@
   {
     "type": "param",
     "named": false
+  },
+  {
+    "type": "primary_constructor_keyword",
+    "named": true
   },
   {
     "type": "private",

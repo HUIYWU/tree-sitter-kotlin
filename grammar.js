@@ -289,7 +289,10 @@ module.exports = grammar({
     )),
 
     primary_constructor: $ => seq(
-      optional(seq(optional($.modifiers), $._primary_constructor_keyword)),
+      optional(seq(
+        optional($.modifiers),
+        alias($._primary_constructor_keyword, $.primary_constructor_keyword)
+      )),
       $._class_parameters
     ),
 
