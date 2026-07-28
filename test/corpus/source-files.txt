@@ -15,8 +15,10 @@ val x = 4
         (type_identifier))
       (value_arguments
         (value_argument
-          (string_literal)))))
+          (string_literal
+            (string_content))))))
   (property_declaration
+    (binding_pattern_kind)
     (variable_declaration
       (simple_identifier))
     (integer_literal)))
@@ -41,7 +43,8 @@ Multiple file annotations
         (type_identifier))
       (value_arguments
         (value_argument
-          (string_literal)))))
+          (string_literal
+            (string_content))))))
   (file_annotation
     (constructor_invocation
       (user_type
@@ -76,8 +79,7 @@ fun main() {
       (identifier
         (simple_identifier)
         (simple_identifier)
-        (simple_identifier))))
-  (import_list
+        (simple_identifier)))
     (import_header
       (identifier
         (simple_identifier)

@@ -30,12 +30,13 @@ fun foo()
     = 1
 
 ---
+
 (source_file
-   (function_declaration
+  (function_declaration
     (simple_identifier)
     (function_value_parameters)
-    (function_body 
-    (integer_literal))))
+    (function_body
+      (integer_literal))))
 
 ================================================================================
 Binary operator after newline
@@ -50,15 +51,18 @@ fun foo()  {
 --------------------------------------------------------------------------------
 
 (source_file
-  (function_declaration (simple_identifier) (function_value_parameters)
-     (function_body
-        (statements
-           (property_declaration
-              (variable_declaration
-               (simple_identifier))
-              (conjunction_expression
-               (simple_identifier)
-               (simple_identifier)))))))
+  (function_declaration
+    (simple_identifier)
+    (function_value_parameters)
+    (function_body
+      (statements
+        (property_declaration
+          (binding_pattern_kind)
+          (variable_declaration
+            (simple_identifier))
+          (conjunction_expression
+            (simple_identifier)
+            (simple_identifier)))))))
 
 ================================================================================
 Open brace after newline
@@ -78,7 +82,8 @@ fun foo():String
     (function_body
       (statements
         (jump_expression
-          (string_literal))))))
+          (string_literal
+            (string_content)))))))
 
 ================================================================================
 Colon after newline
@@ -113,11 +118,12 @@ fun foo() {
 
 (source_file
   (function_declaration
-   (simple_identifier)
-  (function_value_parameters)
+    (simple_identifier)
+    (function_value_parameters)
     (function_body
       (statements
         (property_declaration
+          (binding_pattern_kind)
           (variable_declaration
             (simple_identifier))
           (elvis_expression
@@ -155,6 +161,7 @@ class Foo {
     (type_identifier)
     (class_body
       (property_declaration
+        (binding_pattern_kind)
         (variable_declaration
           (simple_identifier)
           (user_type
@@ -203,11 +210,11 @@ else boo()
 
 (source_file
   (if_expression
-    (prefix_expression
+    condition: (prefix_expression
       (simple_identifier))
-    (control_structure_body
+    consequence: (control_structure_body
       (integer_literal))
-    (control_structure_body
+    alternative: (control_structure_body
       (call_expression
         (simple_identifier)
         (call_suffix

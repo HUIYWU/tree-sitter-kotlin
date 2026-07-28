@@ -211,7 +211,7 @@
 ] @number
 
 [
-	"null" ; should be highlighted the same as booleans
+	(null_literal) ; should be highlighted the same as booleans
 	(boolean_literal)
 ] @constant.builtin
 
@@ -347,9 +347,7 @@
 	"?:"
 	"!!"
 	"is"
-	"!is"
 	"in"
-	"!in"
 	"as"
 	"as?"
 	".."
